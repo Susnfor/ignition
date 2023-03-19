@@ -109,7 +109,7 @@ a:active {
 }
 
 .catog-container{
-    height: 35vh;
+    height: 100vh;
     width: 100%;
     background-image: url(./bg2.png);
     background-position: center;
@@ -123,7 +123,7 @@ a:active {
 }
 
 .item{
-    height: 200px;
+    height: 400px;
     width: 200px;
     background-color: rgb(255, 255, 255);
     color: #fff;
@@ -135,12 +135,24 @@ a:active {
     flex-grow: 0.2;
 }
 
+.products:hover .item{
+    filter: blur(10px)
+}
+
+.products .item:hover{
+filter: blur(0px);
+}
+
+
+
 #logodesign{
     background-image: url(./logodesign.png);
     max-width: 100%;
     max-height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 #webdesign{
@@ -149,6 +161,7 @@ a:active {
     max-height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 #packaging{
     background-image: url(./packaging.png);
@@ -156,14 +169,16 @@ a:active {
     max-height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 #advert{
-    background-image: url(./advert.png);
+    background-image: url(./bg2.png);
     max-width: 100%;
     max-height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #art{
@@ -177,7 +192,7 @@ a:active {
 
 .item p{
     text-align: center;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     /* border: 2px solid green; */
     border-radius: 16px 16px 0px 0px;
     font-size: 25px;
@@ -185,5 +200,114 @@ a:active {
 
 .top-catog{
     text-align: center;
-    /* padding-top: 5px; */
+    padding-top: 10px;
+    font-size: 2em;
 }
+
+.contactbtn{
+    display:flex;
+    justify-content: center;
+
+}
+
+/* CSS */
+button{
+  appearance: none;
+  background-color: #1A1A1A;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  max-width: 200px;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  width: 100%;
+}
+
+
+button:hover {
+  color: antiquewhite;
+  background-color: rgb(255, 49, 49);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  border: 2px solid #ff6060;
+}
+
+
+.top-catog h1{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+
+}
+
+
+.top-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.form-container{
+    height: 100vh;
+    background-color: black;
+}
+
+
+form { 
+    max-width:500px; 
+    margin: auto auto; 
+    padding-top: 2%;
+}
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
